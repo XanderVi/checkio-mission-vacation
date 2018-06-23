@@ -1,0 +1,38 @@
+AIRPLANE_SPEED = 900  # km/h
+TRAIN_SPEED = 120     # km/h
+CAR_SPEED = 100       # km/h
+ONE_MILE = 1.609344   # km
+
+class Transport:
+    pass
+
+class Airplane(Transport):
+    pass
+
+class Train(Transport):
+    pass
+
+class Car(Transport):
+    pass
+
+
+if __name__ == '__main__':
+    #These "asserts" using only for self-checking and not necessary for auto-testing
+
+    person_1 = Airplane("John")
+    person_2 = Train("Bob")
+    person_3 = Car("Alice")
+
+    assert person_1.travel("1000 km") == """1. John go to the airport
+2. John fly by the airplane: 1h and 7m
+3. John walk to the nearest bar"""
+    
+    assert person_2.travel("450 miles") == """1. Bob go to the train station
+2. Bob travel by the train: 6h and 2m
+3. Bob walk to the nearest bar"""
+    
+    assert person_3.travel("5290 km") == """1. Alice go to the garage
+2. Alice ride by the car: 52h and 54m
+3. Alice walk to the nearest bar"""
+    
+    print("Coding complete? Let's try tests!")

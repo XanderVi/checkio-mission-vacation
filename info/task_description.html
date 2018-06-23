@@ -1,0 +1,67 @@
+<p>
+    You should help your friends who go travel. You need to count how long the trip to the destination place will be, depends on the chosen transport (Airplane, Train, Car). Also you need to make a short plan of their travel in the next format:<br>
+For Airplane:<br>
+"""1. 'name' go to the airport<br>
+2. 'name' fly by the airplane: Xh and Ym<br>
+3. 'name' walk to the nearest bar"""<br>
+(Xh and Ym - X hours and Y minutes)<br>
+<br>
+For Train:<br>
+"""1. 'name' go to the train station<br>
+2. 'name' travel by the train: Xh and Ym<br>
+3. 'name' walk to the nearest bar"""<br>
+<br>
+For Car:<br>
+"""1. 'name' go to the garage<br>
+2. 'name' ride by the car: Xh and Ym<br>
+3. 'name' walk to the nearest bar"""<br>
+<br>
+Your task is to create the class Transport and 3 its subclasses (Airplane, Train, Car). Also they should have the method travel(distance) (template method) which calculate the trip time to the destination place and returns the plan described above.<br>
+The instances of the 3 classes will get the 'name' of the person which will use in the travel description (short plan). The method travel(distance) will get the string as the argument. The string will represent the distance in kilometers or miles, for example "1000 km", "256 miles". 1 mile = 1.609344 km.<br>
+The average speed of the vehicles:<br>
+Airplane = 900 km/h<br>
+Train = 120 km/h<br>
+Car = 100 rm/h<br>
+You should round the minutes if they are not integer (6.4m = 6m, 6.8m = 7m).<br>
+In this mission you could use the <a href='https://en.wikipedia.org/wiki/Template_method_pattern'>Template method</a> design pattern.
+</p>
+
+<p>
+<strong>Example</strong>:
+<pre class="brush: python">
+person_1 = Airplane("John")
+person_2 = Train("Bob")
+person_3 = Car("Alice")
+
+person_1.travel("1000 km") == """1. John go to the airport
+2. John fly by the airplane: 1h and 7m
+3. John walk to the nearest bar"""
+    
+person_2.travel("450 miles") == """1. Bob go to the train station
+2. Bob travel by the train: 6h and 2m
+3. Bob walk to the nearest bar"""
+    
+person_3.travel("5290 km") == """1. Alice go to the garage
+2. Alice ride by the car: 52h and 54m
+3. Alice walk to the nearest bar"""
+</pre>
+</p>
+
+<p>
+    <strong>Input: </strong>name and the distance to the destination place.
+</p>
+
+<p>
+    <strong>Output: </strong>multiline string describes the travel.
+</p>
+
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    For the time calculation.
+</p>
+
+<p>
+    <strong>Precondition:</strong>
+    3 types of the vehicles, speeds are the constants.
+</p>
